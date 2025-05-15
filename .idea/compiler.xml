@@ -13,10 +13,10 @@
         <module name="ruoyi-framework" />
         <module name="ruoyi-system" />
         <module name="ruoyi-activiti" />
-        <module name="ruoyi-common" />
         <module name="ruoyi-generator" />
-        <module name="ruoyi-quartz" />
+        <module name="ruoyi-common" />
         <module name="ruoyi-xscjxxgl" />
+        <module name="ruoyi-quartz" />
         <module name="ruoyi-admin" />
       </profile>
     </annotationProcessing>

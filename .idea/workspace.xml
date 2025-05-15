@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fd45c57-b82a-4c91-b166-96473dc89621" name="Changes" comment="小修改" />
+    <list default="true" id="7fd45c57-b82a-4c91-b166-96473dc89621" name="Changes" comment="小修改">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4096f06c-8168-4ee8-bf6b-0be0cdc0c506.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-admin/src/main/java/com/ruoyi/web/core/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-admin/src/main/java/com/ruoyi/web/core/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysNoticeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysNoticeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/controller/CjlrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/controller/CjlrController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/domain/BjCj.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/domain/BjCj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/domain/CjTj.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/domain/CjTj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/domain/Cjlr.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/domain/Cjlr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/domain/Gpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/domain/Gpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/mapper/CjlrMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/mapper/CjlrMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/service/ICjlrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/service/ICjlrService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/service/impl/CjlrServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/service/impl/CjlrServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,45 +71,46 @@
   <component name="ProjectId" id="2u2IEYxIuxPCoe70saPwWjw0kfc" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
-    <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SHELLCHECK.PATH&quot;: &quot;我会在意&quot;,
-    &quot;Spring Boot.RuoYiApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;checkBoxType&quot;: &quot;false&quot;,
-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jett/Downloads/studentGradeBackend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;29d47a36f8eb2520e38ba12be8d6dca8&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SHELLCHECK.PATH": "我会在意",
+    "Spring Boot.RuoYiApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "checkBoxType": "false",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "C:/Users/86182/Desktop/SXT2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "spring.configuration.checksum": "29d47a36f8eb2520e38ba12be8d6dca8",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -179,6 +195,7 @@
       <workItem from="1747277771559" duration="803000" />
       <workItem from="1747288716004" duration="12000" />
       <workItem from="1747288738051" duration="4146000" />
+      <workItem from="1747301553355" duration="1713000" />
     </task>
     <task id="LOCAL-00001" summary="查询课程详细信息">
       <option name="closed" value="true" />
