@@ -134,14 +134,6 @@ public class CjlrServiceImpl implements ICjlrService {
         return cjlrMapper.deleteCjlrByCjlrId(cjlrId);
     }
 
-    /**
-     * 不分页查询成绩统计列表
-     * @return
-     */
-    @Override
-    public List<CjTj> selectCjTjList() {
-        return cjlrMapper.selectCjTjList();
-    }
 
     /**
      * 学生成绩分析

@@ -71,11 +71,7 @@ public interface ICjlrService{
      */
     public int deleteCjlrByCjlrId(String cjlrId);
 
-    /**
-     * 不分页查询成绩统计列表
-     * @return
-     */
-    List<CjTj> selectCjTjList();
+
 
     /**
      * 学生成绩分析
