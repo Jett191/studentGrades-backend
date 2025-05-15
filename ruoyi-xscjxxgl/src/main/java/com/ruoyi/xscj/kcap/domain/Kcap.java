@@ -1,4 +1,4 @@
-// Todo XSJ
+
 package com.ruoyi.xscj.kcap.domain;
 
 import java.util.Date;

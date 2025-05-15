@@ -71,4 +71,29 @@ public interface ICjlrService{
      */
     public int deleteCjlrByCjlrId(String cjlrId);
 
+    /**
+     * 不分页查询成绩统计列表
+     * @return
+     */
+    List<CjTj> selectCjTjList();
+
+    /**
+     * 学生成绩分析
+     * @param xsName
+     * @return
+     */
+    List<Cjlr> selectXscjfx(String xsName);
+
+    /**
+     * 查询gpa
+     * @return
+     */
+    List<Gpa> selectGpaList();
+
+    /**
+     * 查询班级成绩排名
+     * @return
+     */
+    List<BjCj> selectBjCjList();
+
 }

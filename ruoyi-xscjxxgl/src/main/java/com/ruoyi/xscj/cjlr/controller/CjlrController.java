@@ -121,4 +121,108 @@ public class CjlrController extends BaseController {
         return toAjax(cjlrService.updateCjlr(cjlr));
     }
 
+    /**
+     * 导入数据
+     */
+    @ApiOperation("导入数据")
+    @Log(title = "成绩录入", businessType = BusinessType.IMPORT)
+    @PreAuthorize("@ss.hasPermi('xscj:cjlr:import')")
+    @PostMapping("/importData")
+    public AjaxResult importData(MultipartFile file) throws Exception {
+        ExcelUtil<Cjlr> util = new ExcelUtil<Cjlr>(Cjlr.class);
+        InputStream inputStream = file.getInputStream();
+        List<Cjlr> list = util.importExcel(inputStream);
+        inputStream.close();
+        int count = cjlrService.batchInsertCjlr(list);
+        return AjaxResult.success("导入成功" + count + "条信息！");
+    }
+
+    /**
+     * 修改成绩
+     */
+    @ApiOperation("修改成绩")
+    @Log(title = "修改成绩", businessType = BusinessType.UPDATE)
+    @PutMapping("/updateXgCj")
+    public AjaxResult updateXgCj(@RequestBody Cjlr cjlr) {
+        Cjxgsp cjxgsp = new Cjxgsp();
+        cjxgsp.setXsName(cjlr.getXsName());
+        cjxgsp.setKcName(cjlr.getKcName());
+        cjxgsp.setXgqCj(cjlr.getKcCj());
+        cjxgsp.setXghCj(cjlr.getXghCj());
+        cjxgsp.setCjlrId(cjlr.getCjlrId());
+        System.out.println(cjxgsp);
+        return toAjax(cjxgspService.insertCjxgsp(cjxgsp));
+    }
+
+    /**
+     * 删除成绩录入
+     */
+    @ApiOperation("删除成绩录入")
+    @PreAuthorize("@ss.hasPermi('xscj:cjlr:remove')")
+    @Log(title = "成绩录入", businessType = BusinessType.DELETE)
+    @DeleteMapping("/{cjlrIds}")
+    public AjaxResult remove(@PathVariable String[] cjlrIds) {
+        return toAjax(cjlrService.deleteCjlrByCjlrIds(cjlrIds));
+    }
+
+    /**
+     * 查询成绩统计列表
+     */
+
+    //TODO：刘子扬 成绩统计功能
+    @ApiOperation("查询成绩统计列表")
+    @GetMapping("/selectCjTjList")
+    public AjaxResult selectCjTjList() {
+        try {
+            log.info("开始查询成绩统计列表");
+
+            List<CjTj> list = cjlrService.selectCjTjList();
+
+            if (list == null || list.isEmpty()) {
+                log.warn("查询成绩统计列表结果为空");
+                return AjaxResult.error("未查询到成绩统计数据");
+            }
+
+            log.info("查询成绩统计列表成功，返回记录数：{}", list.size());
+            return AjaxResult.success(list);
+
+        } catch (Exception e) {
+            log.error("查询成绩统计列表异常", e);
+            return AjaxResult.error("查询成绩统计列表失败：" + e.getMessage());
+        }
+    }
+
+    /**
+     * 学生成绩分析
+     */
+    //TODO: 王丽发 成绩排序
+    @ApiOperation("学生成绩分析")
+    @GetMapping(value = "/selectXscjfx/{xsName}")
+    public AjaxResult selectXscjfx(@PathVariable("xsName") String xsName) {
+        System.out.println(xsName);
+        return success(cjlrService.selectXscjfx(xsName));
+    }
+
+    /**
+     * 查询gpa
+     */
+    //TODO: 王家盛 GPA计算与成绩单生成
+    @ApiOperation("查询gpa")
+    @GetMapping("/selectGpaList")
+    public AjaxResult selectGpaList() {
+        List<Gpa> list = cjlrService.selectGpaList();
+        return AjaxResult.success(list);
+    }
+
+    //TODO：邵靖彬 成绩排名功能
+    /**
+     * 查询班级成绩排名
+     */
+    @ApiOperation("查询班级成绩排名")
+    @GetMapping("/selectBjCjList")
+    public AjaxResult selectBjCjList() {
+        List<BjCj> list = cjlrService.selectBjCjList();
+        return AjaxResult.success(list);
+    }
+
 }
