@@ -3,6 +3,11 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
       <profile name="Annotation profile for ruoyi" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -15,10 +20,21 @@
         <module name="ruoyi-activiti" />
         <module name="ruoyi-common" />
         <module name="ruoyi-generator" />
-        <module name="ruoyi-quartz" />
         <module name="ruoyi-xscjxxgl" />
+        <module name="ruoyi-quartz" />
         <module name="ruoyi-admin" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ruoyi-activiti" target="17" />
+      <module name="ruoyi-admin" target="17" />
+      <module name="ruoyi-common" target="17" />
+      <module name="ruoyi-framework" target="17" />
+      <module name="ruoyi-generator" target="17" />
+      <module name="ruoyi-quartz" target="17" />
+      <module name="ruoyi-system" target="17" />
+      <module name="ruoyi-xscjxxgl" target="17" />
+      <module name="studentGrades-backendWIS" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
