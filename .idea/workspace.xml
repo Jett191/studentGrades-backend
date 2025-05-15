@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fd45c57-b82a-4c91-b166-96473dc89621" name="Changes" comment="小修改">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4096f06c-8168-4ee8-bf6b-0be0cdc0c506.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/controller/XnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/controller/XnController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/domain/Xn.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/domain/Xn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/domain/XnKc.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/domain/XnKc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/mapper/XnMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/mapper/XnMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/service/IXnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/service/IXnService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/service/impl/XnServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/service/impl/XnServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/controller/KcxxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/controller/KcxxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/Js.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/Js.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/Kcxx.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/Kcxx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/KcxxFj.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/KcxxFj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/mapper/KcxxMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/mapper/KcxxMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/service/IKcxxService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/service/IKcxxService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/service/impl/KcxxServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/service/impl/KcxxServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +39,12 @@
     &quot;assignee&quot;: &quot;Jett191&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Jett191/studentGradesBackend.git&quot;,
-    &quot;accountId&quot;: &quot;b9542876-e997-4a53-8638-566eb08e06d7&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Jett191/studentGrades-backend.git",
+    "accountId": "b9542876-e997-4a53-8638-566eb08e06d7"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.96/tomcat-embed-core-9.0.96.jar!/org/apache/coyote/http11/Http11Processor.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.3.39/spring-aop-5.3.39.jar!/org/springframework/aop/framework/CglibAopProxy.class" root0="SKIP_INSPECTION" />
@@ -86,7 +83,7 @@
     "WebServerToolWindowFactoryState": "false",
     "checkBoxType": "false",
     "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "LZY",
     "last_opened_file_path": "/Users/jett/Downloads/studentGradeBackend",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -95,7 +92,8 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel",
-    "spring.configuration.checksum": "597d31537e55835d5f9017ce51ee2a59",
+
+    "spring.configuration.checksum": "29d47a36f8eb2520e38ba12be8d6dca8",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -187,8 +185,9 @@
       <workItem from="1745913526788" duration="22000" />
       <workItem from="1747277771559" duration="803000" />
       <workItem from="1747288716004" duration="12000" />
-      <workItem from="1747288738051" duration="4146000" />
-      <workItem from="1747300912548" duration="646000" />
+
+      <workItem from="1747288738051" duration="5494000" />
+      <workItem from="1747302618434" duration="78000" />
     </task>
     <task id="LOCAL-00001" summary="查询课程详细信息">
       <option name="closed" value="true" />
