@@ -18,7 +18,6 @@ public interface KcapMapper {
      *
      * @return 课程安排集合
      */
-    //TODO: 邵靖彬 课程冲突检测
     @Select({
             "SELECT kcap_id AS kcapId, kc_name AS kcName, kc_qtime AS kcQtime, kc_ztime AS kcZtime,",
             "       kc_dd AS kcDd, sk_js AS skJs, create_by AS createBy, create_time AS createTime,",
@@ -34,7 +33,6 @@ public interface KcapMapper {
      * @param kcap 课程安排实体
      * @return 更新条数
      */
-    //TODO: 邵靖彬 课程冲突检测
     @Update({
             "<script>",
             "UPDATE xscj_kcap",
@@ -62,7 +60,6 @@ public interface KcapMapper {
      * @param kcapId 课程安排主键
      * @return 删除条数
      */
-    //TODO: 邵靖彬 课程冲突检测
     @Delete("DELETE FROM xscj_kcap WHERE kcap_id = #{kcapId}")
     int deleteKcapByKcapId(@Param("kcapId") String kcapId);
 
@@ -82,9 +79,9 @@ public interface KcapMapper {
             "</script>"
     })
     int deleteKcapByKcapIds(@Param("array") String[] kcapIds);
-}
 
-     * 查询课程安排
+
+     /* 查询课程安排
      *
      * @param kcapId 课程安排主键
      * @return 课程安排
@@ -177,7 +174,4 @@ public interface KcapMapper {
     })
     @Options(useGeneratedKeys = true, keyProperty = "kcapId")
     int insertKcap(Kcap kcap);
-
-
 }
-

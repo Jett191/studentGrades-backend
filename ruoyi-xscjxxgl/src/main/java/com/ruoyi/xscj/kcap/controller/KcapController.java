@@ -30,6 +30,13 @@ import java.util.List;
 @Api("课程安排")
 public class KcapController extends BaseController {
 
+
+    @Resource
+    private IKcapService kcapService;
+
+    @Resource
+    private KcapMapper kcapMapper;
+
     /**
      * 获取课程安排详细信息
      */
@@ -96,14 +103,6 @@ public class KcapController extends BaseController {
     public AjaxResult remove(@PathVariable String[] kcapIds) {
         return toAjax(kcapService.deleteKcapByKcapIds(kcapIds));
     }
-}
-
-    //TODO: 向世杰 课程安排管理
-    @Resource
-    private IKcapService kcapService;
-
-    @Resource
-    private KcapMapper kcapMapper;
 
     /**
      * 查询课程安排列表

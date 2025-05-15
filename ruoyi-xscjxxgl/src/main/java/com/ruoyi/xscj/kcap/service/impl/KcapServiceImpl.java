@@ -66,7 +66,7 @@ public class KcapServiceImpl implements IKcapService {
         return kcapMapper.deleteKcapByKcapId(kcapId);
     }
 
-     * 查询课程安排
+     /* 查询课程安排
      *
      * @param kcapId 课程安排主键
      * @return 课程安排

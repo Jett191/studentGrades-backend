@@ -39,7 +39,7 @@ public interface IKcapService
     //TODO: 邵靖彬 课程冲突检测
     public int deleteKcapByKcapId(String kcapId);
 
-public interface IKcapService {
+
     /**
      * 查询课程安排
      *
