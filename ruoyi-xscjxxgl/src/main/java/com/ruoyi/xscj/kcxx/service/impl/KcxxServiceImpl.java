@@ -296,5 +296,36 @@ public class KcxxServiceImpl implements IKcxxService {
     return kcxxMapper.selectXsList();
   }
 
+  /**
+   * 新增附件
+   * @param kcxxFj
+   * @return
+   */
+  @Override
+  public int insertKcxxFjByKcxxId(KcxxFj kcxxFj) {
+    return kcxxMapper.insertKcxxFjByKcxxId(kcxxFj);
+  }
+
+  /**
+   * 根据ID查询附件列表
+   * @param kcxxFj
+   * @return
+   */
+  @Override
+  public List<KcxxFj> selectKcxxFjList(KcxxFj kcxxFj) {
+    System.out.println(kcxxFj);
+    return kcxxMapper.selectKcxxFjList(kcxxFj);
+  }
+
+  /**
+   * 删除课程附件
+   * @param fjs
+   * @return
+   */
+  @Override
+  public int deleteKcxxFjByFjs(Integer[] fjs) {
+    return kcxxMapper.deleteKcxxFjByFjs(fjs);
+  }
+
 
 }
