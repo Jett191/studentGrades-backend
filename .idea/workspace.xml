@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fd45c57-b82a-4c91-b166-96473dc89621" name="Changes" comment="小修改">
+
       <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/controller/KcxxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/controller/KcxxController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/Js.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/Js.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/Kcxx.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/Kcxx.java" afterDir="false" />
@@ -185,7 +186,6 @@
       <workItem from="1745913526788" duration="22000" />
       <workItem from="1747277771559" duration="803000" />
       <workItem from="1747288716004" duration="12000" />
-
       <workItem from="1747288738051" duration="5494000" />
       <workItem from="1747302618434" duration="78000" />
     </task>
