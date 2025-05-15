@@ -9,6 +9,11 @@
       <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/controller/CjlrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/controller/CjlrController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/service/ICjlrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/service/ICjlrService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/service/impl/CjlrServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjlr/service/impl/CjlrServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjxgsp/controller/CjxgspController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjxgsp/controller/CjxgspController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjxgsp/domain/Cjxgsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjxgsp/domain/Cjxgsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjxgsp/mapper/CjxgspMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjxgsp/mapper/CjxgspMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjxgsp/service/ICjxgspService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjxgsp/service/ICjxgspService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjxgsp/service/impl/CjxgspServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/cjxgsp/service/impl/CjxgspServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcap/controller/KcapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcap/controller/KcapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcap/domain/Kcap.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcap/domain/Kcap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcap/mapper/KcapMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcap/mapper/KcapMapper.java" afterDir="false" />
@@ -203,7 +208,7 @@
       <workItem from="1747277771559" duration="803000" />
       <workItem from="1747288716004" duration="12000" />
       <workItem from="1747288738051" duration="4146000" />
-      <workItem from="1747312745533" duration="2093000" />
+      <workItem from="1747312745533" duration="3174000" />
     </task>
     <task id="LOCAL-00001" summary="查询课程详细信息">
       <option name="closed" value="true" />
