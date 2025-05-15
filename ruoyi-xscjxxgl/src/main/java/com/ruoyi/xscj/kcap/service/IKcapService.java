@@ -9,6 +9,7 @@ import com.ruoyi.xscj.kcap.domain.Kcap;
  * 课程安排Service接口
  *
  */
+
 public interface IKcapService
 {
     /**
@@ -37,4 +38,44 @@ public interface IKcapService
      */
     //TODO: 邵靖彬 课程冲突检测
     public int deleteKcapByKcapId(String kcapId);
+
+public interface IKcapService {
+    /**
+     * 查询课程安排
+     *
+     * @param kcapId 课程安排主键
+     * @return 课程安排
+     */
+    //TODO: 向世杰 课程安排管理
+    public Kcap selectKcapByKcapId(String kcapId);
+
+    /**
+     * 查询课程安排列表
+     *
+     * @param kcap 课程安排
+     * @return 课程安排集合
+     */
+    //TODO: 向世杰 课程安排管理
+    public List<Kcap> selectKcapList(Kcap kcap);
+
+    /**
+     * 新增课程安排
+     *
+     * @param kcap 课程安排
+     * @return 结果
+     */
+    //TODO: 向世杰 课程安排管理
+    public int insertKcap(Kcap kcap);
+
+    /**
+     * 批量新增课程安排
+     *
+     * @param kcaps 课程安排List
+     * @return 结果
+     */
+    //TODO: 向世杰 课程安排管理
+    public int batchInsertKcap(List<Kcap> kcaps);
+
+
+
 }
