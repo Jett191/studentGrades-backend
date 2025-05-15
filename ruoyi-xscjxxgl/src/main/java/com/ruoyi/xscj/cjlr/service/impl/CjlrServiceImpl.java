@@ -134,4 +134,40 @@ public class CjlrServiceImpl implements ICjlrService {
         return cjlrMapper.deleteCjlrByCjlrId(cjlrId);
     }
 
+    /**
+     * 不分页查询成绩统计列表
+     * @return
+     */
+    @Override
+    public List<CjTj> selectCjTjList() {
+        return cjlrMapper.selectCjTjList();
+    }
+
+    /**
+     * 学生成绩分析
+     * @param xsName
+     * @return
+     */
+    @Override
+    public List<Cjlr> selectXscjfx(String xsName) {
+        return cjlrMapper.selectXscjfx(xsName);
+    }
+
+    /**
+     * 查询gpa
+     * @return
+     */
+    @Override
+    public List<Gpa> selectGpaList() {
+        return cjlrMapper.selectGpaList();
+    }
+
+    /**
+     * 查询班级成绩排名
+     * @return
+     */
+    @Override
+    public List<BjCj> selectBjCjList() {
+        return cjlrMapper.selectBjCjList();
+    }
 }
