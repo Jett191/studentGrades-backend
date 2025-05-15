@@ -38,20 +38,8 @@ public class KcapController extends BaseController {
     private KcapMapper kcapMapper;
 
     /**
-     * 获取课程安排详细信息
-     */
-    //TODO: 向世杰 课程安排管理
-    @ApiOperation("获取课程安排详细信息")
-    @PreAuthorize("@ss.hasPermi('xscj:kcap:query')")
-    @GetMapping(value = "/{kcapId}")
-    public AjaxResult getInfo(@PathVariable("kcapId") String kcapId) {
-        return success(kcapService.selectKcapByKcapId(kcapId));
-    }
-
-    /**
      * 新增课程安排
      */
-    //TODO：邵靖彬 课程冲突检测
     @ApiOperation("新增课程安排")
     @PreAuthorize("@ss.hasPermi('xscj:kcap:add')")
     @Log(title = "课程安排", businessType = BusinessType.INSERT)
