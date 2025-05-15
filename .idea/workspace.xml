@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fd45c57-b82a-4c91-b166-96473dc89621" name="Changes" comment="小修改" />
+    <list default="true" id="7fd45c57-b82a-4c91-b166-96473dc89621" name="Changes" comment="小修改">
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/controller/KcxxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/controller/KcxxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/Js.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/Js.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/Kcxx.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/Kcxx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/KcxxFj.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/domain/KcxxFj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/mapper/KcxxMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/mapper/KcxxMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/service/IKcxxService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/service/IKcxxService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/service/impl/KcxxServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/kcxx/service/impl/KcxxServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,12 +39,12 @@
     &quot;assignee&quot;: &quot;Jett191&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Jett191/studentGradesBackend.git&quot;,
-    &quot;accountId&quot;: &quot;b9542876-e997-4a53-8638-566eb08e06d7&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Jett191/studentGrades-backend.git",
+    "accountId": "b9542876-e997-4a53-8638-566eb08e06d7"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.96/tomcat-embed-core-9.0.96.jar!/org/apache/coyote/http11/Http11Processor.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.3.39/spring-aop-5.3.39.jar!/org/springframework/aop/framework/CglibAopProxy.class" root0="SKIP_INSPECTION" />
@@ -61,40 +69,40 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SHELLCHECK.PATH&quot;: &quot;我会在意&quot;,
-    &quot;Spring Boot.RuoYiApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;checkBoxType&quot;: &quot;false&quot;,
-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jett/Downloads/studentGradeBackend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;29d47a36f8eb2520e38ba12be8d6dca8&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SHELLCHECK.PATH": "我会在意",
+    "Spring Boot.RuoYiApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "checkBoxType": "false",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "LZY",
+    "last_opened_file_path": "/Users/jett/Downloads/studentGradeBackend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "spring.configuration.checksum": "29d47a36f8eb2520e38ba12be8d6dca8",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -178,7 +186,8 @@
       <workItem from="1745913526788" duration="22000" />
       <workItem from="1747277771559" duration="803000" />
       <workItem from="1747288716004" duration="12000" />
-      <workItem from="1747288738051" duration="4146000" />
+      <workItem from="1747288738051" duration="5494000" />
+      <workItem from="1747302618434" duration="78000" />
     </task>
     <task id="LOCAL-00001" summary="查询课程详细信息">
       <option name="closed" value="true" />
