@@ -92,7 +92,6 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel",
-
     "spring.configuration.checksum": "29d47a36f8eb2520e38ba12be8d6dca8",
     "vue.rearranger.settings.migration": "true"
   },
@@ -185,7 +184,6 @@
       <workItem from="1745913526788" duration="22000" />
       <workItem from="1747277771559" duration="803000" />
       <workItem from="1747288716004" duration="12000" />
-
       <workItem from="1747288738051" duration="5494000" />
       <workItem from="1747302618434" duration="78000" />
     </task>
