@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for ruoyi" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar" />
+        </processorPath>
+        <module name="ruoyi-framework" />
+        <module name="ruoyi-system" />
+        <module name="ruoyi-activiti" />
+        <module name="ruoyi-generator" />
+        <module name="ruoyi-common" />
+        <module name="ruoyi-xscjxxgl" />
+        <module name="ruoyi-quartz" />
+        <module name="ruoyi-admin" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ruoyi-activiti" target="17" />
+      <module name="ruoyi-admin" target="17" />
+      <module name="ruoyi-common" target="17" />
+      <module name="ruoyi-framework" target="17" />
+      <module name="ruoyi-generator" target="17" />
+      <module name="ruoyi-quartz" target="17" />
+      <module name="ruoyi-system" target="17" />
+      <module name="ruoyi-xscjxxgl" target="17" />
+      <module name="studentGrades-backendWIS" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
