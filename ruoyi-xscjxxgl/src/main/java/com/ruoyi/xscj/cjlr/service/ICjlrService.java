@@ -92,4 +92,10 @@ public interface ICjlrService{
      */
     List<BjCj> selectBjCjList();
 
+    /**
+     * 不分页查询成绩统计列表
+     * @return
+     */
+    List<CjTj> selectCjTjList();
+
 }

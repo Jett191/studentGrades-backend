@@ -162,4 +162,14 @@ public class CjlrServiceImpl implements ICjlrService {
     public List<BjCj> selectBjCjList() {
         return cjlrMapper.selectBjCjList();
     }
+
+    /**
+     * 不分页查询成绩统计列表
+     * @return
+     */
+    @Override
+    public List<CjTj> selectCjTjList() {
+        return cjlrMapper.selectCjTjList();
+    }
+
 }
