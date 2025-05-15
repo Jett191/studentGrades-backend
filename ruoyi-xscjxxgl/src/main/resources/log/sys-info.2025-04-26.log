@@ -1,0 +1,55 @@
+22:56:48.397 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.5.Final
+22:56:48.397 [restartedMain] INFO  c.r.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 17.0.15 on Jetts-MacBook.local with PID 20552 (/Users/jett/code/school/javaDesign/studentGradesBackend copy/ruoyi-admin/target/classes started by jett in /Users/jett/code/school/javaDesign/studentGradesBackend copy)
+22:56:48.398 [restartedMain] INFO  c.r.RuoYiApplication - [logStartupProfileInfo,686] - The following 1 profile is active: "druid"
+22:56:49.522 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+22:56:49.523 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+22:56:49.524 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.96]
+22:56:49.553 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+22:56:50.152 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+22:56:51.146 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+22:56:51.151 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+22:56:51.151 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+22:56:51.151 [restartedMain] INFO  o.q.s.RAMJobStore - [initialize,155] - RAMJobStore initialized.
+22:56:51.151 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+22:56:51.151 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+22:56:51.151 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+22:56:51.152 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@594517c5
+22:56:51.460 [restartedMain] INFO  o.a.e.i.c.ProcessEngineConfigurationImpl - [initConfigurators,1551] - Found 1 Process Engine Configurators in total:
+22:56:51.460 [restartedMain] INFO  o.a.e.i.c.ProcessEngineConfigurationImpl - [initConfigurators,1553] - class org.activiti.spring.process.conf.ProcessExtensionsConfiguratorAutoConfiguration$$EnhancerBySpringCGLIB$$19423b9c (priority:10000)
+22:56:51.460 [restartedMain] INFO  o.a.e.i.c.ProcessEngineConfigurationImpl - [configuratorsBeforeInit,1563] - Executing beforeInit() of class org.activiti.spring.process.conf.ProcessExtensionsConfiguratorAutoConfiguration$$EnhancerBySpringCGLIB$$19423b9c (priority:10000)
+22:56:51.674 [restartedMain] INFO  o.a.e.i.c.ProcessEngineConfigurationImpl - [configuratorsAfterInit,1570] - Executing configure() of class org.activiti.spring.process.conf.ProcessExtensionsConfiguratorAutoConfiguration$$EnhancerBySpringCGLIB$$19423b9c (priority:10000)
+22:56:51.686 [restartedMain] INFO  o.a.e.i.ProcessEngineImpl - [<init>,74] - ProcessEngine default created
+22:56:51.687 [restartedMain] INFO  o.a.e.i.a.DefaultAsyncJobExecutor - [start,169] - Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].
+22:56:51.687 [Thread-4] INFO  o.a.e.i.a.AcquireAsyncJobsDueRunnable - [run,45] - {} starting to acquire async jobs due
+22:56:51.687 [Thread-5] INFO  o.a.e.i.a.AcquireTimerJobsRunnable - [run,49] - {} starting to acquire async jobs due
+22:56:51.687 [Thread-6] INFO  o.a.e.i.a.ResetExpiredJobsRunnable - [run,51] - {} starting to reset expired jobs
+22:56:53.085 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+22:56:53.297 [restartedMain] INFO  o.a.s.AbstractActivitiSmartLifeCycle - [start,66] - Starting...
+22:56:53.342 [restartedMain] INFO  o.a.s.AbstractActivitiSmartLifeCycle - [start,71] - Started.
+22:56:53.342 [restartedMain] INFO  o.a.s.AbstractActivitiSmartLifeCycle - [start,66] - Starting...
+22:56:53.348 [restartedMain] INFO  o.a.s.AbstractActivitiSmartLifeCycle - [start,71] - Started.
+22:56:53.348 [restartedMain] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+22:56:53.358 [restartedMain] INFO  c.r.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 5.144 seconds (JVM running for 5.491)
+22:56:53.524 [RMI TCP Connection(3)-127.0.0.1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:16:41.241 [SpringApplicationShutdownHook] INFO  o.a.s.AbstractActivitiSmartLifeCycle - [stop,80] - Stopping...
+23:16:41.242 [SpringApplicationShutdownHook] INFO  o.a.s.AbstractActivitiSmartLifeCycle - [stop,84] - Stopped.
+23:16:41.242 [SpringApplicationShutdownHook] INFO  o.a.s.AbstractActivitiSmartLifeCycle - [stop,80] - Stopping...
+23:16:41.242 [SpringApplicationShutdownHook] INFO  o.a.s.AbstractActivitiSmartLifeCycle - [stop,84] - Stopped.
+23:16:41.243 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+23:16:41.269 [SpringApplicationShutdownHook] INFO  o.a.e.i.a.DefaultAsyncJobExecutor - [shutdown,208] - Shutting down the default async job executor [org.activiti.spring.SpringAsyncExecutor].
+23:16:41.270 [activiti-acquire-timer-jobs] INFO  o.a.e.i.a.AcquireTimerJobsRunnable - [run,115] - {} stopped async job due acquisition
+23:16:41.270 [activiti-acquire-async-jobs] INFO  o.a.e.i.a.AcquireAsyncJobsDueRunnable - [run,115] - {} stopped async job due acquisition
+23:16:41.270 [activiti-reset-expired-jobs] INFO  o.a.e.i.a.ResetExpiredJobsRunnable - [run,99] - {} stopped resetting expired jobs
+23:16:41.271 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+23:16:41.271 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+23:16:41.271 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+23:16:41.271 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,31] - ====关闭后台任务任务线程池====
+23:16:41.275 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+23:16:41.278 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed

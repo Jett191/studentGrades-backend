@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.activiti.mapper.MyTaskMapper">
+
+    <select id="selectMyTask" resultType="com.ruoyi.activiti.vo.MyTaskVo">
+        SELECT DISTINCT t1.ID_            as taskId,
+        t1.NAME_          as taskName,
+        t1.PROC_INST_ID_  as processInstanceId,
+        t2.business_key   as businessKey,
+        t2.business_type  as businessType,
+        t2.business_title as businessTitle,
+        t2.process_status as processStatus,
+        t2.apply_user     as applyUser,
+        t2.user_ids       as userIds,
+        t2.apply_time     as applyTime,
+        t1.CREATE_TIME_   as createTaskTime,
+        t1.CLAIM_TIME_    AS claimTime
+        FROM act_ru_task t1
+        INNER JOIN ACT_RU_IDENTITYLINK I ON I.TASK_ID_ = t1.ID_
+        LEFT JOIN info_run_task_data t2 ON t1.PROC_INST_ID_ = t2.process_instance_id
+        WHERE (t1.ASSIGNEE_ = #{assignee} OR (t1.ASSIGNEE_ IS NULL
+#         AND I.TYPE_ = 'candidate' AND I.GROUP_ID_ =  (SELECT
+        AND I.TYPE_ = 'candidate' AND I.GROUP_ID_ in  (SELECT
+        sys_role.role_key
+        FROM
+        sys_user_role
+        INNER JOIN
+        sys_user
+        ON
+        sys_user_role.user_id = sys_user.user_id
+        INNER JOIN
+        sys_role
+        ON
+        sys_user_role.role_id = sys_role.role_id
+        WHERE
+        sys_user.user_id = #{assignee})
+        OR (I.USER_ID_ = #{assignee}
+        AND t1.CLAIM_TIME_ IS NULL AND  I.TYPE_ = 'candidate'))
+
+        )
+        <if test="processStatus != null "> and process_status = #{processStatus}</if>
+        <if test="businessType != null "> and business_type = #{businessType}</if>
+        <if test="businessTitle != null  and businessTitle != ''"> and business_title like concat('%', #{businessTitle}, '%')</if>
+        <if test="applyUser != null  and applyUser != ''"> and apply_user like concat('%', #{applyUser}, '%')</if>
+    </select>
+    <select id="selectGroupTask" resultType="com.ruoyi.activiti.vo.MyTaskVo">
+        SELECT DISTINCT RES.ID_           AS taskId,
+                        RES.NAME_         AS taskName,
+                        RES.PROC_INST_ID_ AS processInstanceId,
+                        t2.business_key   AS businessKey,
+                        t2.business_type  AS businessType,
+                        t2.business_title AS businessTitle,
+                        t2.apply_user     AS applyUser,
+                        t2.apply_time     AS applyTime,
+                        RES.CREATE_TIME_  AS createTaskTime
+        FROM ACT_RU_TASK RES
+                 INNER JOIN ACT_RU_IDENTITYLINK I ON I.TASK_ID_ = RES.ID_
+                 INNER JOIN ACT_RE_PROCDEF D ON RES.PROC_DEF_ID_ = D.ID_
+                 LEFT JOIN info_run_task_data t2 ON RES.PROC_INST_ID_ = t2.process_instance_id
+        WHERE RES.ASSIGNEE_ IS NULL
+            AND I.TYPE_ = 'candidate'
+           OR I.USER_ID_ = #{assignee}
+            AND RES.CLAIM_TIME_ IS NULL
+        ORDER BY RES.CREATE_TIME_ DESC
+    </select>
+    <select id="selectHistory" resultType="com.ruoyi.activiti.vo.HistoryVo">
+        SELECT task_name   AS taskName,
+               create_time AS endTime,
+               create_name AS nickName,
+               message     AS COMMENT
+        FROM `info_hi_comment`
+        WHERE process_instance_id = #{processInstanceId}
+    </select>
+</mapper>

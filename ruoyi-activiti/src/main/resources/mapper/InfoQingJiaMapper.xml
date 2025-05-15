@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.infoQingJia.mapper.InfoQingJiaMapper">
+
+    <resultMap type="InfoQingJia" id="InfoQingJiaResult">
+        <result property="id" column="id"/>
+        <result property="qingJiaTitle" column="qing_jia_title"/>
+        <result property="qingJiaReason" column="qing_jia_reason"/>
+        <result property="qingJiaDay" column="qing_jia_day"/>
+        <result property="userId" column="user_id"/>
+        <result property="processStatus" column="process_status"/>
+        <result property="processInstanceId" column="process_instance_id"/>
+        <result property="nickName" column="nick_name"/>
+    </resultMap>
+
+    <sql id="selectInfoQingJiaVo">
+        select id, qing_jia_title, qing_jia_reason, qing_jia_day, user_id
+        from info_qing_jia
+    </sql>
+
+    <select id="selectInfoQingJiaList" parameterType="InfoQingJia" resultMap="InfoQingJiaResult">
+        SELECT
+        t1.id,
+        t1.qing_jia_title,
+        t1.qing_jia_reason,
+        t1.qing_jia_day,
+        t1.user_id,
+        t2.process_status,
+        t2.process_instance_id
+        FROM
+        info_qing_jia t1
+        LEFT JOIN ( SELECT * FROM info_run_task_data WHERE business_type = 1 ) t2 ON t1.id = t2.business_key
+        <where>
+            <if test="qingJiaTitle != null  and qingJiaTitle != ''">and qing_jia_title like concat('%', #{qingJiaTitle},
+                '%')
+            </if>
+            <if test="qingJiaReason != null  and qingJiaReason != ''">and qing_jia_reason = #{qingJiaReason}</if>
+            <if test="qingJiaDay != null ">and qing_jia_day = #{qingJiaDay}</if>
+            <if test="userId != null ">and user_id = #{userId}</if>
+        </where>
+    </select>
+
+    <select id="selectInfoQingJiaById" parameterType="Long" resultMap="InfoQingJiaResult">
+        SELECT
+            t1.id,
+            t1.qing_jia_title,
+            t1.qing_jia_reason,
+            t1.qing_jia_day,
+            t1.user_id ,
+            t2.nick_name
+        FROM
+            info_qing_jia t1
+                LEFT JOIN sys_user t2 ON t1.user_id = t2.user_id
+        where t1.id = #{id}
+    </select>
+
+    <insert id="insertInfoQingJia" parameterType="InfoQingJia" useGeneratedKeys="true" keyProperty="id">
+        insert into info_qing_jia
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="qingJiaTitle != null and qingJiaTitle != ''">qing_jia_title,</if>
+            <if test="qingJiaReason != null and qingJiaReason != ''">qing_jia_reason,</if>
+            <if test="qingJiaDay != null">qing_jia_day,</if>
+            <if test="userId != null">user_id,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="qingJiaTitle != null and qingJiaTitle != ''">#{qingJiaTitle},</if>
+            <if test="qingJiaReason != null and qingJiaReason != ''">#{qingJiaReason},</if>
+            <if test="qingJiaDay != null">#{qingJiaDay},</if>
+            <if test="userId != null">#{userId},</if>
+        </trim>
+    </insert>
+
+    <update id="updateInfoQingJia" parameterType="InfoQingJia">
+        update info_qing_jia
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="qingJiaTitle != null and qingJiaTitle != ''">qing_jia_title = #{qingJiaTitle},</if>
+            <if test="qingJiaReason != null and qingJiaReason != ''">qing_jia_reason = #{qingJiaReason},</if>
+            <if test="qingJiaDay != null">qing_jia_day = #{qingJiaDay},</if>
+            <if test="userId != null">user_id = #{userId},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteInfoQingJiaById" parameterType="Long">
+        delete
+        from info_qing_jia
+        where id = #{id}
+    </delete>
+
+    <delete id="deleteInfoQingJiaByIds" parameterType="String">
+        delete from info_qing_jia where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

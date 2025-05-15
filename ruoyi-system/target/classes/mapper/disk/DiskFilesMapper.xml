@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.disk.mapper.DiskFilesMapper">
+
+    <resultMap type="DiskFiles" id="DiskFilesResult">
+        <result property="filesId"    column="files_id"    />
+        <result property="name"    column="name"    />
+        <result property="folder"    column="folder"    />
+        <result property="file"    column="file"    />
+        <result property="type"    column="type"    />
+        <result property="size"    column="size"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="userId"    column="user_id"    />
+        <result property="deptId"    column="dept_id"    />
+        <result property="folderId"    column="folder_id"    />
+        <result property="rootFolderId"    column="root_folder_id"    />
+        <result property="deletes"    column="deletes"    />
+        <result property="userName"    column="user_name"    />
+    </resultMap>
+
+    <sql id="selectDiskFilesVo">
+        select files_id, name, folder, file, type, size, create_by, create_time, update_by, update_time, user_id, dept_id, folder_id, root_folder_id, deletes from disk_files
+    </sql>
+
+    <select id="selectDiskFilesList" parameterType="DiskFiles" resultMap="DiskFilesResult">
+        select d.files_id, d.name, d.folder, d.file, d.type, d.size, d.create_by, d.create_time, d.update_by, d.update_time, d.user_id, d.dept_id, d.folder_id, d.root_folder_id, d.deletes,
+                sys_user.user_name
+        from disk_files d
+        left join sys_user on d.user_id = sys_user.user_id
+        <where>
+            <if test="filesId != null "> and d.files_id = #{filesId}</if>
+            <if test="name != null  and name != ''"> and d.name like concat('%', #{name}, '%')</if>
+            <if test="folder != null  and folder != ''"> and d.folder like concat('%', #{folder}, '%')</if>
+            <if test="file != null  and file != ''"> and d.file like concat('%', #{file}, '%')</if>
+            <if test="type != null  and type != ''"> and d.type like concat('%', #{type}, '%')</if>
+            <if test="size != null "> and d.size like concat('%', #{size}, '%')</if>
+            <if test="userId != null "> and d.user_id = #{userId}</if>
+            <if test="deptId != null "> and d.dept_id = #{deptId}</if>
+            <if test="folderId != null "> and d.folder_id = #{folderId}</if>
+            <if test="rootFolderId != null "> and d.root_folder_id = #{rootFolderId}</if>
+        </where>
+        order by d.files_id desc
+    </select>
+
+    <!--查询网盘文件列表 (图片)-->
+    <select id="selectDiskFilesImageList" parameterType="DiskFiles" resultMap="DiskFilesResult">
+        select d.files_id, d.name, d.folder, d.file, d.type, d.size, d.create_by, d.create_time, d.update_by, d.update_time, d.user_id, d.dept_id, d.folder_id, d.root_folder_id, d.deletes,
+        sys_user.user_name
+        from disk_files d
+        left join sys_user on d.user_id = sys_user.user_id
+        WHERE type LIKE 'jpg' OR type LIKE 'png'
+        order by d.files_id desc
+    </select>
+
+    <!--查询网盘文件列表 (文档)-->
+    <select id="selectDiskFilesWdList" parameterType="DiskFiles" resultMap="DiskFilesResult">
+        select d.files_id, d.name, d.folder, d.file, d.type, d.size, d.create_by, d.create_time, d.update_by, d.update_time, d.user_id, d.dept_id, d.folder_id, d.root_folder_id, d.deletes,
+               sys_user.user_name
+        from disk_files d
+                 left join sys_user on d.user_id = sys_user.user_id
+        WHERE type LIKE 'doc' OR type LIKE 'docx'
+           OR type LIKE 'xls' OR type LIKE 'xlsx'
+           OR type LIKE 'ppt' OR type LIKE 'txt' OR type LIKE 'pdf'
+        order by d.files_id desc
+    </select>
+
+    <!--查询网盘文件列表 (视频)-->
+    <select id="selectDiskFilesMp4List" parameterType="DiskFiles" resultMap="DiskFilesResult">
+        select d.files_id, d.name, d.folder, d.file, d.type, d.size, d.create_by, d.create_time, d.update_by, d.update_time, d.user_id, d.dept_id, d.folder_id, d.root_folder_id, d.deletes,
+               sys_user.user_name
+        from disk_files d
+                 left join sys_user on d.user_id = sys_user.user_id
+        WHERE type LIKE 'mp4'
+        order by d.files_id desc
+    </select>
+
+    <!--查询网盘文件列表 (压缩)-->
+    <select id="selectDiskFilesZipList" parameterType="DiskFiles" resultMap="DiskFilesResult">
+        select d.files_id, d.name, d.folder, d.file, d.type, d.size, d.create_by, d.create_time, d.update_by, d.update_time, d.user_id, d.dept_id, d.folder_id, d.root_folder_id, d.deletes,
+               sys_user.user_name
+        from disk_files d
+                 left join sys_user on d.user_id = sys_user.user_id
+        WHERE type LIKE 'zip'
+        order by d.files_id desc
+    </select>
+
+    <select id="selectDiskFilesByFilesId" parameterType="Integer" resultMap="DiskFilesResult">
+        <include refid="selectDiskFilesVo"/>
+        where files_id = #{filesId}
+    </select>
+
+    <insert id="insertDiskFiles" parameterType="DiskFiles" useGeneratedKeys="true" keyProperty="filesId">
+        insert into disk_files
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name != null">name,</if>
+            <if test="folder != null">folder,</if>
+            <if test="file != null">file,</if>
+            <if test="type != null">type,</if>
+            <if test="size != null">size,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="userId != null">user_id,</if>
+            <if test="deptId != null">dept_id,</if>
+            <if test="folderId != null">folder_id,</if>
+            <if test="rootFolderId != null">root_folder_id,</if>
+            <if test="deletes != null">deletes,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="name != null">#{name},</if>
+            <if test="folder != null">#{folder},</if>
+            <if test="file != null">#{file},</if>
+            <if test="type != null">#{type},</if>
+            <if test="size != null">#{size},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="userId != null">#{userId},</if>
+            <if test="deptId != null">#{deptId},</if>
+            <if test="folderId != null">#{folderId},</if>
+            <if test="rootFolderId != null">#{rootFolderId},</if>
+            <if test="deletes != null">#{deletes},</if>
+         </trim>
+    </insert>
+
+    <update id="updateDiskFiles" parameterType="DiskFiles">
+        update disk_files
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="name != null">name = #{name},</if>
+            <if test="folder != null">folder = #{folder},</if>
+            <if test="file != null">file = #{file},</if>
+            <if test="type != null">type = #{type},</if>
+            <if test="size != null">size = #{size},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="deptId != null">dept_id = #{deptId},</if>
+            <if test="folderId != null">folder_id = #{folderId},</if>
+            <if test="rootFolderId != null">root_folder_id = #{rootFolderId},</if>
+            <if test="deletes != null">deletes = #{deletes},</if>
+        </trim>
+        where files_id = #{filesId}
+    </update>
+
+    <delete id="deleteDiskFilesByFilesId" parameterType="Integer">
+        delete from disk_files where files_id = #{filesId}
+    </delete>
+
+    <delete id="deleteDiskFilesByFilesIds" parameterType="String">
+        delete from disk_files where files_id in
+        <foreach item="filesId" collection="array" open="(" separator="," close=")">
+            #{filesId}
+        </foreach>
+    </delete>
+
+    <!--删除文件夹下所有的文件夹和文件-->
+    <delete id="deleteDiskFilesByfolderIds">
+        delete from disk_files where disk_files.folder_id in
+        <foreach item="filesId" collection="array" open="(" separator="," close=")">
+            #{filesId}
+        </foreach>
+    </delete>
+
+</mapper>

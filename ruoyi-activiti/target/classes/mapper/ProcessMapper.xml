@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.activiti.mapper.MyProcessMapper">
+
+
+    <select id="listData" resultType="com.ruoyi.activiti.domain.DefineVo">
+        SELECT D.ID_            AS deploymentId,
+               D.NAME_          AS deploymentName,
+               P.ID_            AS processDefinitionId,
+               P.NAME_          AS processDefinitionName,
+               P.KEY_           AS processDefinitionKey,
+               P.VERSION_       AS processDefinitionVersion,
+               P.DEPLOYMENT_ID_ AS processDeploymentId,
+               D.CATEGORY_      AS processDefinitionType,
+               D.DEPLOY_TIME_   AS deployTime,
+               p.RESOURCE_NAME_ AS resourceName
+        FROM ACT_RE_DEPLOYMENT D
+                 JOIN ACT_RE_PROCDEF P ON D.ID_ = P.DEPLOYMENT_ID_
+        <where>
+            <if test="processDefinitionType != null  and processDefinitionType != ''"> and D.CATEGORY_ like concat('%', #{processDefinitionType}, '%')</if>
+        </where>
+        ORDER BY D.DEPLOY_TIME_ DESC
+    </select>
+
+    <select id="selectLastVersionProcessDefineKey" resultType="java.lang.String">
+        SELECT P.KEY_ AS processDefinitionKey
+        FROM ACT_RE_DEPLOYMENT D
+                 JOIN ACT_RE_PROCDEF P ON D.ID_ = P.DEPLOYMENT_ID_
+        WHERE D.CATEGORY_ = #{processType}
+        ORDER BY D.DEPLOY_TIME_ DESC LIMIT 1
+    </select>
+
+
+    <delete id="deleteHisTaskById">
+        DELETE
+        FROM `act_hi_taskinst`
+        WHERE ID_ = #{id}
+    </delete>
+    <delete id="deleteHisTask">
+        DELETE
+        FROM `act_hi_taskinst`
+        WHERE PROC_INST_ID_ = #{processInstanceId}
+          AND TASK_DEF_KEY_ = #{taskDefKey}
+    </delete>
+
+</mapper>

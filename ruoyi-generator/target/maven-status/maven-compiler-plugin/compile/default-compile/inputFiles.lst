@@ -1,0 +1,13 @@
+/Users/jett/code/school/javaDesign/studentGradeBackend/ruoyi-generator/src/main/java/com/ruoyi/generator/service/IGenTableColumnService.java
+/Users/jett/code/school/javaDesign/studentGradeBackend/ruoyi-generator/src/main/java/com/ruoyi/generator/service/GenTableServiceImpl.java
+/Users/jett/code/school/javaDesign/studentGradeBackend/ruoyi-generator/src/main/java/com/ruoyi/generator/util/GenUtils.java
+/Users/jett/code/school/javaDesign/studentGradeBackend/ruoyi-generator/src/main/java/com/ruoyi/generator/service/IGenTableService.java
+/Users/jett/code/school/javaDesign/studentGradeBackend/ruoyi-generator/src/main/java/com/ruoyi/generator/domain/GenTable.java
+/Users/jett/code/school/javaDesign/studentGradeBackend/ruoyi-generator/src/main/java/com/ruoyi/generator/util/VelocityInitializer.java
+/Users/jett/code/school/javaDesign/studentGradeBackend/ruoyi-generator/src/main/java/com/ruoyi/generator/util/VelocityUtils.java
+/Users/jett/code/school/javaDesign/studentGradeBackend/ruoyi-generator/src/main/java/com/ruoyi/generator/config/GenConfig.java
+/Users/jett/code/school/javaDesign/studentGradeBackend/ruoyi-generator/src/main/java/com/ruoyi/generator/mapper/GenTableColumnMapper.java
+/Users/jett/code/school/javaDesign/studentGradeBackend/ruoyi-generator/src/main/java/com/ruoyi/generator/mapper/GenTableMapper.java
+/Users/jett/code/school/javaDesign/studentGradeBackend/ruoyi-generator/src/main/java/com/ruoyi/generator/service/GenTableColumnServiceImpl.java
+/Users/jett/code/school/javaDesign/studentGradeBackend/ruoyi-generator/src/main/java/com/ruoyi/generator/domain/GenTableColumn.java
+/Users/jett/code/school/javaDesign/studentGradeBackend/ruoyi-generator/src/main/java/com/ruoyi/generator/controller/GenController.java

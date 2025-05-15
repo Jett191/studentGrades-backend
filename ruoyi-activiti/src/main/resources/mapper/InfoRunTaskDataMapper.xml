@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.infoRunTaskData.mapper.InfoRunTaskDataMapper">
+
+    <resultMap type="InfoRunTaskData" id="InfoRunTaskDataResult">
+        <result property="id"    column="id"    />
+        <result property="businessKey"    column="business_key"    />
+        <result property="businessType"    column="business_type"    />
+        <result property="businessTitle"    column="business_title"    />
+        <result property="processInstanceId"    column="process_instance_id"    />
+        <result property="processStatus"    column="process_status"    />
+        <result property="applyUser"    column="apply_user"    />
+        <result property="applyTime"    column="apply_time"    />
+    </resultMap>
+
+    <sql id="selectInfoRunTaskDataVo">
+        select id, business_key, business_type, business_title, process_instance_id, process_status, apply_user, apply_time from info_run_task_data
+    </sql>
+
+    <select id="selectInfoRunTaskDataList" parameterType="InfoRunTaskData" resultMap="InfoRunTaskDataResult">
+        <include refid="selectInfoRunTaskDataVo"/>
+        <where>
+            <if test="businessKey != null "> and business_key = #{businessKey}</if>
+            <if test="businessType != null "> and business_type = #{businessType}</if>
+            <if test="businessTitle != null  and businessTitle != ''"> and business_title = #{businessTitle}</if>
+            <if test="processInstanceId != null  and processInstanceId != ''"> and process_instance_id = #{processInstanceId}</if>
+            <if test="processStatus != null "> and process_status = #{processStatus}</if>
+            <if test="applyUser != null  and applyUser != ''"> and apply_user = #{applyUser}</if>
+            <if test="applyTime != null "> and apply_time = #{applyTime}</if>
+        </where>
+    </select>
+
+    <select id="selectInfoRunTaskDataById" parameterType="Long" resultMap="InfoRunTaskDataResult">
+        <include refid="selectInfoRunTaskDataVo"/>
+        where id = #{id}
+    </select>
+    <select id="selectDetailInfo" resultType="com.ruoyi.infoRunTaskData.domain.InfoRunTaskData">
+        <include refid="selectInfoRunTaskDataVo"/>
+        where business_key = #{businessKey} and business_type=#{businessType}
+    </select>
+
+    <insert id="insertInfoRunTaskData" parameterType="InfoRunTaskData" useGeneratedKeys="true" keyProperty="id">
+        insert into info_run_task_data
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="businessKey != null">business_key,</if>
+            <if test="businessType != null">business_type,</if>
+            <if test="businessTitle != null">business_title,</if>
+            <if test="processInstanceId != null">process_instance_id,</if>
+            <if test="processStatus != null">process_status,</if>
+            <if test="applyUser != null">apply_user,</if>
+            <if test="applyTime != null">apply_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="businessKey != null">#{businessKey},</if>
+            <if test="businessType != null">#{businessType},</if>
+            <if test="businessTitle != null">#{businessTitle},</if>
+            <if test="processInstanceId != null">#{processInstanceId},</if>
+            <if test="processStatus != null">#{processStatus},</if>
+            <if test="applyUser != null">#{applyUser},</if>
+            <if test="applyTime != null">#{applyTime},</if>
+        </trim>
+    </insert>
+
+    <!--修改正在运行任务的业务数据-->
+    <update id="updateInfoRunTaskData" parameterType="InfoRunTaskData">
+        update info_run_task_data
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="businessKey != null">business_key = #{businessKey},</if>
+            <if test="businessType != null">business_type = #{businessType},</if>
+            <if test="businessTitle != null">business_title = #{businessTitle},</if>
+            <if test="processInstanceId != null">process_instance_id = #{processInstanceId},</if>
+            <if test="processStatus != null">process_status = #{processStatus},</if>
+            <if test="applyUser != null">apply_user = #{applyUser},</if>
+            <if test="applyTime != null">apply_time = #{applyTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <!--修改正在运行任务的业务数据(用于修改业务)-->
+    <update id="updateInfoRunTaskDatas" parameterType="InfoRunTaskData">
+        update info_run_task_data
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="businessKey != null">business_key = #{businessKey},</if>
+            <if test="businessType != null">business_type = #{businessType},</if>
+            <if test="businessTitle != null">business_title = #{businessTitle},</if>
+            <if test="processInstanceId != null">process_instance_id = #{processInstanceId},</if>
+            <if test="processStatus != null">process_status = #{processStatus},</if>
+            <if test="applyUser != null">apply_user = #{applyUser},</if>
+            <if test="applyTime != null">apply_time = #{applyTime},</if>
+            <if test="userIds != null">user_ids = #{userIds},</if>
+        </trim>
+        where business_key = #{businessKey}
+    </update>
+
+    <delete id="deleteInfoRunTaskDataById" parameterType="Long">
+        delete from info_run_task_data where id = #{id}
+    </delete>
+
+    <delete id="deleteInfoRunTaskDataByIds" parameterType="String">
+        delete from info_run_task_data where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+    <delete id="deleteData">
+        delete
+        from info_run_task_data
+        where business_key = #{businessKey}
+          and business_type = #{businessType}
+    </delete>
+</mapper>
