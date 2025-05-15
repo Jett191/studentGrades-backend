@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fd45c57-b82a-4c91-b166-96473dc89621" name="Changes" comment="小修改">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4096f06c-8168-4ee8-bf6b-0be0cdc0c506.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/controller/XnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/controller/XnController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/domain/Xn.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/domain/Xn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/domain/XnKc.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/domain/XnKc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/mapper/XnMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/mapper/XnMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/service/IXnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/service/IXnService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/service/impl/XnServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/xn/service/impl/XnServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/jbxx/controller/XsjbxxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/jbxx/controller/XsjbxxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/jbxx/domain/Xsjbxx.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/jbxx/domain/Xsjbxx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/jbxx/mapper/XsjbxxMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/jbxx/mapper/XsjbxxMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/jbxx/service/IXsjbxxService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/jbxx/service/IXsjbxxService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/jbxx/service/impl/XsjbxxServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ruoyi-xscjxxgl/src/main/java/com/ruoyi/xscj/jbxx/service/impl/XsjbxxServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +184,7 @@
       <workItem from="1747277771559" duration="803000" />
       <workItem from="1747288716004" duration="12000" />
       <workItem from="1747288738051" duration="4146000" />
-      <workItem from="1747300912548" duration="646000" />
+      <workItem from="1747300912548" duration="2965000" />
     </task>
     <task id="LOCAL-00001" summary="查询课程详细信息">
       <option name="closed" value="true" />
