@@ -198,4 +198,27 @@ public class CjlrController extends BaseController {
         return AjaxResult.success(list);
     }
 
+
+    @ApiOperation("查询成绩统计列表")
+    @GetMapping("/selectCjTjList")
+    public AjaxResult selectCjTjList() {
+        try {
+            log.info("开始查询成绩统计列表");
+
+            List<CjTj> list = cjlrService.selectCjTjList();
+
+            if (list == null || list.isEmpty()) {
+                log.warn("查询成绩统计列表结果为空");
+                return AjaxResult.error("未查询到成绩统计数据");
+            }
+
+            log.info("查询成绩统计列表成功，返回记录数：{}", list.size());
+            return AjaxResult.success(list);
+
+        } catch (Exception e) {
+            log.error("查询成绩统计列表异常", e);
+            return AjaxResult.error("查询成绩统计列表失败：" + e.getMessage());
+        }
+    }
+
 }

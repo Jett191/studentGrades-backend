@@ -55,7 +55,7 @@ public interface CjlrMapper {
     })
     @ResultMap("CjlrResult")
     List<Cjlr> selectCjlrList(Cjlr cjlr);
-    
+
 
     /**
      * 学生成绩分析
@@ -177,4 +177,13 @@ public interface CjlrMapper {
             "</script>"
     })
     int deleteCjlrByCjlrIds(@Param("array") String[] cjlrIds);
+
+    /**
+     * 不分页查询成绩统计列表
+     *
+     * @return 课程成绩统计列表
+     */
+    @Select("SELECT kc_name AS kcName, AVG(kc_cj) AS pjf, MAX(kc_cj) AS zgf, MIN(kc_cj) AS zdf " +
+        "FROM xscj_cjlr GROUP BY kc_name ORDER BY pjf DESC")
+    List<CjTj> selectCjTjList();
 }
