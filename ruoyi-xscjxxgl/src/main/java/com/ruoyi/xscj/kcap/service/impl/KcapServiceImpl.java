@@ -1,5 +1,4 @@
 
-// Todo XSJ
 package com.ruoyi.xscj.kcap.service.impl;
 
 import com.ruoyi.common.utils.DateUtils;
@@ -31,6 +30,42 @@ public class KcapServiceImpl implements IKcapService {
     private SqlSessionFactory sqlSessionFactory;
 
     /**
+     * 修改课程安排
+     *
+     * @param kcap 课程安排
+     * @return 结果
+     */
+    //TODO：邵靖彬  课程冲突检测
+    @Override
+    public int updateKcap(Kcap kcap) {
+        kcap.setUpdateTime(DateUtils.getNowDate());
+        return kcapMapper.updateKcap(kcap);
+    }
+
+    /**
+     * 批量删除课程安排
+     *
+     * @param kcapIds 需要删除的课程安排主键
+     * @return 结果
+     */
+    //TODO：邵靖彬  课程冲突检测
+    @Override
+    public int deleteKcapByKcapIds(String[] kcapIds) {
+        return kcapMapper.deleteKcapByKcapIds(kcapIds);
+    }
+
+    /**
+     * 删除课程安排信息
+     *
+     * @param kcapId 课程安排主键
+     * @return 结果
+     */
+    //TODO：邵靖彬 课程冲突检测
+    @Override
+    public int deleteKcapByKcapId(String kcapId) {
+        return kcapMapper.deleteKcapByKcapId(kcapId);
+    }
+
      * 查询课程安排
      *
      * @param kcapId 课程安排主键
