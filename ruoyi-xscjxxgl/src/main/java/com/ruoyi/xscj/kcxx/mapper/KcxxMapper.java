@@ -198,6 +198,113 @@ public interface KcxxMapper {
   })
   List<Js> selectXsList();
 
+  /**
+   * 批量删除课程附件
+   *
+   * @param kcxxIds 需要删除的课程主键集合
+   * @return 删除条数
+   */
+  @Delete({
+          "<script>",
+          "DELETE FROM xscj_kcxx_fj WHERE kcxx_id IN",
+          "<foreach item=\"id\" collection=\"array\" open=\"(\" separator=\",\" close=\")\">",
+          "  #{id}",
+          "</foreach>",
+          "</script>"
+  })
+  int deleteKcxxFjByKcxxIds(@Param("array") String[] kcxxIds);
+
+  /**
+   * 通过课程主键删除单个附件
+   *
+   * @param kcxxId 课程主键
+   * @return 删除条数
+   */
+  @Update("UPDATE xscj_kcxx_fj SET deleted = 1 WHERE kcxx_id = #{kcxxId}")
+  int deleteKcxxFjByKcxxId(@Param("kcxxId") String kcxxId);
+
+
+  /**
+   * 批量删除附件
+   *
+   * @param fjs 附件 ID 数组
+   * @return 删除条数
+   */
+  @Delete({
+          "<script>",
+          "DELETE FROM xscj_kcxx_fj WHERE fj IN",
+          "<foreach item=\"fj\" collection=\"array\" open=\"(\" separator=\",\" close=\")\">",
+          "  #{fj}",
+          "</foreach>",
+          "</script>"
+  })
+  int deleteKcxxFjByFjs(@Param("array") Integer[] fjs);
+
+  /**
+   * 批量新增课程附件
+   *
+   * @param list 附件列表
+   * @return 插入条数
+   */
+  @Insert({
+          "<script>",
+          "INSERT INTO xscj_kcxx_fj(fj, kcxx_id, file_name, file_size) VALUES",
+          "<foreach item=\"item\" collection=\"list\" separator=\",\">",
+          "  (#{item.fj}, #{item.kcxxId}, #{item.fileName}, #{item.fileSize})",
+          "</foreach>",
+          "</script>"
+  })
+  int batchKcxxFj(List<KcxxFj> list);
+
+  /**
+   * 新增单个附件
+   *
+   * @param fj 附件实体
+   * @return 插入条数
+   */
+  @Insert({
+          "<script>",
+          "INSERT INTO xscj_kcxx_fj",
+          "<trim prefix=\"(\" suffix=\")\" suffixOverrides=\",\">",
+          "  <if test=\"kcxxId != null and kcxxId != ''\">kcxx_id,</if>",
+          "  <if test=\"fileName != null\">file_name,</if>",
+          "  <if test=\"fileSize != null\">file_size,</if>",
+          "</trim>",
+          "VALUES",
+          "<trim prefix=\"(\" suffix=\")\" suffixOverrides=\",\">",
+          "  <if test=\"kcxxId != null and kcxxId != ''\">#{kcxxId},</if>",
+          "  <if test=\"fileName != null\">#{fileName},</if>",
+          "  <if test=\"fileSize != null\">#{fileSize},</if>",
+          "</trim>",
+          "</script>"
+  })
+  @Options(useGeneratedKeys = true, keyProperty = "fj")
+  int insertKcxxFjByKcxxId(KcxxFj fj);
+
+  /**
+   * 查询附件列表
+   *
+   * @param filter 过滤条件实体（只用 kcxxId、fileName、fileSize）
+   * @return 附件集合
+   */
+  @Select({
+          "<script>",
+          "SELECT fj, kcxx_id AS kcxxId, file_name AS fileName, file_size AS fileSize",
+          "FROM xscj_kcxx_fj",
+          "<where>",
+          "  <if test=\"kcxxId != null and kcxxId != ''\">AND kcxx_id = #{kcxxId}</if>",
+          "  <if test=\"fileName != null and fileName != ''\">AND file_name LIKE CONCAT('%', #{fileName}, '%')</if>",
+          "  <if test=\"fileSize != null\">AND file_size = #{fileSize}</if>",
+          "</where>",
+          "</script>"
+  })
+  @Results(id = "KcxxFjResult", value = {
+          @Result(property = "fj",       column = "fj"),
+          @Result(property = "kcxxId",   column = "kcxx_id"),
+          @Result(property = "fileName", column = "file_name"),
+          @Result(property = "fileSize", column = "file_size")
+  })
+  List<KcxxFj> selectKcxxFjList(KcxxFj filter);
 
 
 

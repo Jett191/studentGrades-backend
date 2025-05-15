@@ -82,4 +82,26 @@ public interface IKcxxService
    * @return
    */
   List<Js> selectXsList();
+
+  /**
+   * 新增附件
+   * @param kcxxFj
+   * @return
+   */
+  int insertKcxxFjByKcxxId(KcxxFj kcxxFj);
+
+  /**
+   * 根据ID查询附件列表
+   * @param kcxxFj
+   * @return
+   */
+  List<KcxxFj> selectKcxxFjList(KcxxFj kcxxFj);
+
+  /**
+   * 删除课程附件
+   * @param fjs
+   * @return
+   */
+  int deleteKcxxFjByFjs(Integer[] fjs);
+
 }
