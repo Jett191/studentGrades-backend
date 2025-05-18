@@ -28,7 +28,7 @@ import com.ruoyi.system.service.ISysMenuService;
 @RestController
 public class SysLoginController
 {
-    //TODO:王丽发  注册功能 / 登录功能
+
     @Autowired
     private SysLoginService loginService;
 
