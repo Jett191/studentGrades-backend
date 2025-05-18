@@ -59,6 +59,123 @@ public class KcxxController extends BaseController {
   }
 
   /**
+   * 新增课程信息
+   */
+  @ApiOperation("新增课程信息")
+  @PreAuthorize("@ss.hasPermi('xscj:kcxx:add')")
+  @Log(title = "课程信息", businessType = BusinessType.INSERT)
+  @PostMapping
+  public AjaxResult add(@RequestBody Kcxx kcxx) {
+    return toAjax(kcxxService.insertKcxx(kcxx));
+  }
+
+  /**
+   * 修改课程信息
+   */
+  @ApiOperation("修改课程信息")
+  @PreAuthorize("@ss.hasPermi('xscj:kcxx:edit')")
+  @Log(title = "课程信息", businessType = BusinessType.UPDATE)
+  @PutMapping
+  public AjaxResult edit(@RequestBody Kcxx kcxx) {
+    return toAjax(kcxxService.updateKcxx(kcxx));
+  }
+
+  /**
+   * 删除课程信息
+   */
+  @ApiOperation("删除课程信息")
+  @PreAuthorize("@ss.hasPermi('xscj:kcxx:remove')")
+  @Log(title = "课程信息", businessType = BusinessType.DELETE)
+  @DeleteMapping("/{kcxxIds}")
+  public AjaxResult remove(@PathVariable String[] kcxxIds) {
+    return toAjax(kcxxService.deleteKcxxByKcxxIds(kcxxIds));
+  }
+
+
+  /**
+   * 下载模板
+   */
+  @ApiOperation("下载模板")
+  @PostMapping("/importTemplate")
+  public void importTemplate(HttpServletResponse response) {
+    ExcelUtil<Kcxx> util = new ExcelUtil<Kcxx>(Kcxx.class);
+    util.importTemplateExcel(response, "课程附件数据");
+  }
+
+  /**
+   * 导出课程信息列表
+   */
+  @ApiOperation("导出课程信息列表")
+  @PreAuthorize("@ss.hasPermi('xscj:kcxx:export')")
+  @Log(title = "课程信息", businessType = BusinessType.EXPORT)
+  @PostMapping("/export")
+  public void export(HttpServletResponse response, Kcxx kcxx) {
+    List<Kcxx> list = kcxxService.selectKcxxList(kcxx);
+    ExcelUtil<Kcxx> util = new ExcelUtil<Kcxx>(Kcxx.class);
+    util.exportExcel(response, list, "课程信息数据");
+  }
+
+
+  /**
+   * 获得课程信息主键ID (UUID)
+   */
+  @ApiOperation("获得课程信息主键ID (UUID)")
+  @GetMapping("/getKcXxId")
+  public AjaxResult getKcXxId() {
+    String getKcXxId = IdUtils.fastSimpleUUID();
+    return success(getKcXxId);
+  }
+
+  /**
+   * 不分页查询课程列表
+   * @return
+   */
+  @ApiOperation("不分页查询课程列表")
+  @RequestMapping(value = "/selectKcList", method = RequestMethod.GET)
+  public AjaxResult selectKcList() {
+    List<Kcxx> list = kcxxService.selectKcList();
+    return AjaxResult.success(list);
+  }
+
+  /**
+   * 不分页查询教师列表
+   * @return
+   */
+  @ApiOperation("不分页查询教师列表")
+  @GetMapping("/selectJsList")
+  public AjaxResult selectJsList() {
+    List<Js> list = kcxxService.selectJsList();
+    return AjaxResult.success(list);
+  }
+
+  /**
+   * 不分页查询学生列表
+   * @return
+   */
+  @ApiOperation("不分页查询学生列表")
+  @GetMapping("/selectXsList")
+  public AjaxResult selectXsList() {
+    List<Js> list = kcxxService.selectXsList();
+    return AjaxResult.success(list);
+  }
+
+  /**
+   * 导入数据
+   */
+  @ApiOperation("导入数据")
+  @Log(title = "课程信息", businessType = BusinessType.IMPORT)
+  @PreAuthorize("@ss.hasPermi('xscj:kcxx:import')")
+  @PostMapping("/importData")
+  public AjaxResult importData(MultipartFile file) throws Exception {
+    ExcelUtil<Kcxx> util = new ExcelUtil<Kcxx>(Kcxx.class);
+    InputStream inputStream = file.getInputStream();
+    List<Kcxx> list = util.importExcel(inputStream);
+    inputStream.close();
+    int count = kcxxService.batchInsertKcxx(list);
+    return AjaxResult.success("导入成功" + count + "条信息！");
+  }
+
+  /**
    * 新增附件
    */
   @ApiOperation("新增附件")
