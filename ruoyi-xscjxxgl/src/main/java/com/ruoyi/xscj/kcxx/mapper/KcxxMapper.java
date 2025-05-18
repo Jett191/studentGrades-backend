@@ -43,7 +43,7 @@ public interface KcxxMapper {
    */
   @Select({
       "<script>",
-      "SELECT kcxx_id, kc_name, kc_dm, xf, kc_lx, create_by, create_time, update_by, update_time, user_id, dept_id",
+      "SELECT kcxx_id, kc_name, kc_dm, xf, kc_lx, create_by, create_time, update_by, update_time, user_id, dept_id, deleted",
       "FROM xscj_kcxx",
       "<where>",
       "  <if test=\"kcName != null and kcName != ''\">AND kc_name LIKE CONCAT('%', #{kcName}, '%')</if>",
@@ -52,6 +52,7 @@ public interface KcxxMapper {
       "  <if test=\"kcLx  != null and kcLx  != ''\">AND kc_lx  = #{kcLx}</if>",
       "  <if test=\"userId!= null\">AND user_id = #{userId}</if>",
       "  <if test=\"deptId!= null\">AND dept_id = #{deptId}</if>",
+      "  <if test=\"deleted != null\">AND deleted = 0 </if>",
       "</where>",
       "</script>"
   })
