@@ -11,9 +11,6 @@ import java.util.List;
 
 /**
  * 请假Service业务层处理
- *
- * @author ruoyi
- * @date 2024-02-22
  */
 @Service
 public class InfoQingJiaServiceImpl implements IInfoQingJiaService {

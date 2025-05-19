@@ -11,9 +11,6 @@ import javax.annotation.Resource;
 
 /**
  * 审批记录Service业务层处理
- *
- * @author ruoyi
- * @date 2024-03-11
  */
 @Service
 public class InfoHiCommentServiceImpl implements IInfoHiCommentService

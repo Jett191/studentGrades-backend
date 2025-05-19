@@ -5,9 +5,6 @@ import com.ruoyi.infoQingJia.domain.InfoQingJia;
 
 /**
  * 请假Service接口
- * 
- * @author ruoyi
- * @date 2024-02-22
  */
 public interface IInfoQingJiaService 
 {

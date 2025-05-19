@@ -22,7 +22,7 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 /**
  * 通用配置
  *
- * @author ruoyi
+ *
  */
 @Configuration
 public class ResourcesConfig implements WebMvcConfigurer

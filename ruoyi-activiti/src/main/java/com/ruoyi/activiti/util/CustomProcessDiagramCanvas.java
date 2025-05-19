@@ -917,7 +917,6 @@ public class CustomProcessDiagramCanvas {
      * @param y      y
      * @param width  width
      * @param height height
-     * @author Fuxs
      */
     public void drawRunningActivityHighLight(int x, int y, int width, int height) {
         Paint originalPaint = this.g.getPaint();
@@ -979,7 +978,6 @@ public class CustomProcessDiagramCanvas {
      * @param text
      * @param graphicInfo
      * @param centered
-     * @author Fuxs
      */
     public void drawLabel(String text, GraphicInfo graphicInfo, boolean centered) {
         float interline = 1.0f;

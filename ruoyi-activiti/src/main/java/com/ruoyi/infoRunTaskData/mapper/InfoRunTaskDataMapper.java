@@ -6,9 +6,6 @@ import org.apache.ibatis.annotations.Param;
 
 /**
  * 正在运行任务的业务数据Mapper接口
- *
- * @author ruoyi
- * @date 2024-02-22
  */
 public interface InfoRunTaskDataMapper
 {

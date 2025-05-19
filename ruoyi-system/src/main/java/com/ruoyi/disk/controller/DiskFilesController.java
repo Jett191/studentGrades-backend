@@ -23,9 +23,6 @@ import java.util.List;
 
 /**
  * 网盘文件Controller
- *
- * @author huacai
- * @date 2024-07-09
  */
 @RestController
 @RequestMapping("/disk/files")

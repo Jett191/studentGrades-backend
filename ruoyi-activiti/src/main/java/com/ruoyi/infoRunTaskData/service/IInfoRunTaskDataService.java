@@ -5,9 +5,6 @@ import com.ruoyi.infoRunTaskData.domain.InfoRunTaskData;
 
 /**
  * 正在运行任务的业务数据Service接口
- *
- * @author ruoyi
- * @date 2024-02-22
  */
 public interface IInfoRunTaskDataService
 {

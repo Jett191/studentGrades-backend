@@ -27,9 +27,6 @@ import com.ruoyi.common.core.page.TableDataInfo;
 
 /**
  * 请假Controller
- *
- * @author ruoyi
- * @date 2024-02-22
  */
 @RestController
 @RequestMapping("/infoQingJia/infoQingJia")

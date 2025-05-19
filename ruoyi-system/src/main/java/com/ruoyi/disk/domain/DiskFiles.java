@@ -7,9 +7,6 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * 网盘文件对象 disk_files
- *
- * @author huacai
- * @date 2024-07-09
  */
 public class DiskFiles extends BaseEntity
 {

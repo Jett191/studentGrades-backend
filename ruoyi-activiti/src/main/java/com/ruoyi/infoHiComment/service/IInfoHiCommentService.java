@@ -5,9 +5,6 @@ import com.ruoyi.infoHiComment.domain.InfoHiComment;
 
 /**
  * 审批记录Service接口
- * 
- * @author ruoyi
- * @date 2024-03-11
  */
 public interface IInfoHiCommentService 
 {

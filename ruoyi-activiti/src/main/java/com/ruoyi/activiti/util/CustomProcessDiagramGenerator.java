@@ -11,8 +11,6 @@ import java.util.*;
  * Class to generate an image based the diagram interchange information in a BPMN 2.0 process.
  * 在 BPMN 2.0 流程中基于图表交换信息生成图像的类。
  *
- * @author Joram Barrez
- * @author Tijs Rademakers
  */
 public class CustomProcessDiagramGenerator implements ICustomProcessDiagramGenerator {
 
@@ -374,7 +372,6 @@ public class CustomProcessDiagramGenerator implements ICustomProcessDiagramGener
      * @param flowNode
      * @param highLightedActivities
      * @param highLightedFlows
-     * @author Fuxs
      */
     protected void drawActivity(CustomProcessDiagramCanvas processDiagramCanvas, BpmnModel bpmnModel, FlowNode flowNode,
                                 List<String> highLightedActivities, List<String> runningActivityIdList, List<String> highLightedFlows, List<String> runningActivityFlowsIds) {
@@ -608,7 +605,6 @@ public class CustomProcessDiagramGenerator implements ICustomProcessDiagramGener
      *
      * @param processDiagramCanvas CustomProcessDiagramCanvas
      * @param graphicInfo          GraphicInfo
-     * @author Fuxs
      */
     private static void drawRunningActivityHighLight(CustomProcessDiagramCanvas processDiagramCanvas, GraphicInfo graphicInfo) {
         processDiagramCanvas.drawRunningActivityHighLight((int) graphicInfo.getX(), (int) graphicInfo.getY(), (int) graphicInfo

@@ -9,9 +9,6 @@ import java.util.Date;
 
 /**
  * 正在运行任务的业务数据对象 info_run_task_data
- *
- * @author ruoyi
- * @date 2024-02-22
  */
 public class InfoRunTaskData extends BaseEntity
 {

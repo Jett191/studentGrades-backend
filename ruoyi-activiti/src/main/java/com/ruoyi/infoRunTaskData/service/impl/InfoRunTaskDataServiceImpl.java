@@ -14,9 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 正在运行任务的业务数据Service业务层处理
- *
- * @author ruoyi
- * @date 2024-02-22
  */
 @Service
 public class InfoRunTaskDataServiceImpl implements IInfoRunTaskDataService {

@@ -6,9 +6,6 @@ import java.util.List;
 
 /**
  * 网盘文件Mapper接口
- *
- * @author huacai
- * @date 2024-07-09
  */
 public interface DiskFilesMapper
 {

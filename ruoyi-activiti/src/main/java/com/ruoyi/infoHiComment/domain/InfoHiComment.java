@@ -7,9 +7,6 @@ import com.ruoyi.common.core.domain.BaseEntity;
 
 /**
  * 审批记录对象 info_hi_comment
- * 
- * @author ruoyi
- * @date 2024-03-11
  */
 public class InfoHiComment extends BaseEntity
 {

@@ -7,9 +7,6 @@ import com.ruoyi.common.core.domain.BaseEntity;
 
 /**
  * 请假对象 info_qing_jia
- *
- * @author ruoyi
- * @date 2024-02-22
  */
 public class InfoQingJia extends BaseEntity {
     private static final long serialVersionUID = 1L;

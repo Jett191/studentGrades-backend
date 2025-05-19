@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 /**
  * 用户登录对象
  *
- * @author ruoyi
+ *
  */
 @Data
 @AllArgsConstructor

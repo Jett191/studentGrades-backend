@@ -6,9 +6,6 @@ import com.ruoyi.infoHiComment.domain.InfoHiComment;
 
 /**
  * 审批记录Mapper接口
- *
- * @author ruoyi
- * @date 2024-03-11
  */
 public interface InfoHiCommentMapper {
     /**

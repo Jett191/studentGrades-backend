@@ -8,7 +8,7 @@ import java.util.Calendar;
 /**
  * 读取项目相关配置
  *
- * @author ruoyi
+ *
  */
 @Component
 @ConfigurationProperties(prefix = "ruoyi")

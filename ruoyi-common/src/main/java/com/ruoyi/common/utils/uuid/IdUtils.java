@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * ID生成器工具类
  *
- * @author ruoyi
+ *
  */
 public class IdUtils
 {
